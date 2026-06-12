@@ -1,0 +1,193 @@
+:root {
+    --verde-agro: #1b5e20;
+    --verde-claro: #4caf50;
+    --terra: #8d6e63;
+    --terra-escura: #4e342e;
+    --bg: #f1f8e9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-jogo {
+    background-color: var(--verde-agro);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.status-painel {
+    display: flex;
+    gap: 15px;
+}
+
+.status-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.mercado-container {
+    width: 100%;
+    max-width: 700px;
+    background: #fff3e0;
+    border: 2px solid #ffe0b2;
+    color: #e65100;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+.conteudo-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+@media (max-width: 600px) {
+    .conteudo-principal {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fazenda-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.lote-terra {
+    background-color: var(--terra);
+    border: 4px solid var(--terra-escura);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.lote-titulo {
+    font-weight: bold;
+}
+
+.lote-visual {
+    font-size: 3rem;
+    margin: 5px 0;
+}
+
+.btn-lote {
+    background-color: var(--verde-claro);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-lote:hover { 
+    background-color: var(--verde-agro); 
+}
+
+.btn-lote:disabled { 
+    background-color: #9e9e9e; 
+    cursor: not-allowed; 
+}
+
+.btn-colheita { 
+    background-color: #ff9800; 
+}
+
+.btn-colheita:hover { 
+    background-color: #f57c00; 
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-tecnologia {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.card-tecnologia h3 { 
+    margin: 0 0 10px 0; 
+    color: var(--verde-agro); 
+}
+
+.card-tecnologia p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-upgrade {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-upgrade:hover { 
+    background-color: #01579b; 
+}
+
+.btn-upgrade:disabled { 
+    background-color: #ccc; 
+    cursor: not-allowed; 
+}
+
+.painel-logs {
+    background: #263238;
+    color: #eceff1;
+    padding: 10px;
+    border-radius: 8px;
+    height: 120px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}

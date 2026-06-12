@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte: Tech Tycoon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-jogo">
+        <h2>🚜 AgroForte Tycoon</h2>
+        <div class="status-painel">
+            <div class="status-box">💰 $<span id="carteira">100</span></div>
+        </div>
+    </header>
+
+    <div class="mercado-container">
+        🌽 Preço de Venda da Safra: $<span id="preco-mercado">30</span> / un
+    </div>
+
+    <div class="conteudo-principal">
+        <div class="fazenda-grid">
+            <div class="lote-terra">
+                <div class="lote-titulo">Lote 1</div>
+                <div class="lote-visual" id="emoji-0">🟫</div>
+                <button class="btn-lote" id="btn-0" onclick="processarCliqueLote(0)">Plantar ($10)</button>
+            </div>
+            <div class="lote-terra">
+                <div class="lote-titulo">Lote 2</div>
+                <div class="lote-visual" id="emoji-1">🟫</div>
+                <button class="btn-lote" id="btn-1" onclick="processarCliqueLote(1)">Plantar ($10)</button>
+            </div>
+            <div class="lote-terra">
+                <div class="lote-titulo">Lote 3</div>
+                <div class="lote-visual" id="emoji-2">🟫</div>
+                <button class="btn-lote" id="btn-2" onclick="processarCliqueLote(2)">Plantar ($10)</button>
+            </div>
+            <div class="lote-terra">
+                <div class="lote-titulo">Lote 4</div>
+                <div class="lote-visual" id="emoji-3">🟫</div>
+                <button class="btn-lote" id="btn-3" onclick="processarCliqueLote(3)">Plantar ($10)</button>
+            </div>
+        </div>
+
+        <div class="menu-lateral">
+            <div class="card-tecnologia">
+                <h3>🛰️ BioTecnologia</h3>
+                <p>Acelera o crescimento das plantas em 2x.</p>
+                <button class="btn-upgrade" id="upgrade-bio" onclick="comprarUpgrade()">Comprar ($150)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="painel-logs" id="logs">
+        [Sistema]: Bem-vindo ao AgroForte! Invista em suas sementes para faturar alto.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
